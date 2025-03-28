@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  ai-business-consultant:
+    build: .
+    container_name: ai-business-consultant
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./model:/app/model
+      - ./static:/app/static
+      - ./config:/app/config
+    environment:
+      - APP_ENV=production
+      - APP_PORT=8000
+    restart: unless-stopped
+    networks:
+      - ai-network
+
+networks:
+  ai-network:
+    driver: bridge
