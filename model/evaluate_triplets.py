@@ -1,4 +1,4 @@
-import os
+import random
 import pandas as pd
 import numpy as np
 import json
@@ -8,7 +8,9 @@ from sklearn.manifold import TSNE
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.metrics import silhouette_score
 import torch
+import os
 from transformers import BertModel, BertTokenizer
+
 
 # Пути к директориям
 TRIPLETS_DIR = '/home/ubuntu/ai_business_consultant/triplet_improvement/triplets'

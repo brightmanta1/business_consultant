@@ -8,8 +8,10 @@ import json
 import os
 from datetime import datetime
 
-sys.path.append('/opt/.manus/.sandbox-runtime')
-from data_api import ApiClient
+
+# Стало
+from data_api import ApiClient  # Если data_api.py находится в той же директории
+
 
 # Создаем клиент API
 client = ApiClient()
