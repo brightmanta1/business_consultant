@@ -8,12 +8,14 @@ import time
 import logging
 import random
 from typing import Dict, List, Optional, Any, Union
+import torch
 
 from fastapi import FastAPI, HTTPException, Depends, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel, Field
+
 
 # Импортируем интеграцию с моделью
 from model_integration import model_integration
