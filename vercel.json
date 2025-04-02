@@ -5,28 +5,28 @@
             "src": "api_app.py",
             "use": "@vercel/python",
             "config": {
-                "maxLambdaSize": "50mb",
-                "runtime": "python3.12"
+                "maxLambdaSize": "15mb"
             }
         }
     ],
     "routes": [
         {
             "src": "/api/(.*)",
-            "dest": "api_app.py"
+            "dest": "api_app.py",
+            "headers": {
+                "Cache-Control": "public, max-age=0, must-revalidate"
+            }
         },
         {
             "src": "/(.*)",
-            "dest": "api_app.py"
+            "dest": "api_app.py",
+            "headers": {
+                "Cache-Control": "public, max-age=0, must-revalidate"
+            }
         }
     ],
     "env": {
         "PYTHONPATH": ".",
         "PYTHONUNBUFFERED": "1"
-    },
-    "build": {
-        "env": {
-            "PYTHONUNBUFFERED": "1"
-        }
     }
 } 
