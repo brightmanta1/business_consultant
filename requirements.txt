@@ -10,9 +10,9 @@ aiofiles==23.1.0
 prometheus-client==0.16.0
 redis==4.5.4
 --find-links https://download.pytorch.org/whl/cpu/torch_stable.html
-torch==2.0.0+cpu
-torchvision==0.15.1+cpu
-torchaudio==2.0.1
+torch==2.2.0+cpu
+torchvision==0.17.0+cpu
+torchaudio==2.2.0
 --pre
 transformers==4.27.4
 numpy==1.24.3
