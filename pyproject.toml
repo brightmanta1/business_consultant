@@ -3,6 +3,7 @@ requires = [
     "setuptools>=65.5.1",
     "wheel>=0.38.4",
     "pip>=23.0.1",
+    "distutils-extra>=2.39",
     "numpy>=1.24.3"
 ]
 build-backend = "setuptools.build_meta"
@@ -15,6 +16,7 @@ requires-python = ">=3.10"
 dependencies = [
     "setuptools>=65.5.1",
     "wheel>=0.38.4",
+    "distutils-extra>=2.39",
     "numpy>=1.24.3",
     "fastapi==0.95.0",
     "uvicorn==0.21.1",
